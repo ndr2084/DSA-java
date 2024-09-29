@@ -13,7 +13,8 @@ public class HeapFunctions implements Heap {
 
     @Override
     public Node pop() {
-        return null;
+        System.out.println("shithead");
+        return null ;
     }
 
     @Override
