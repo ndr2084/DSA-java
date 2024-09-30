@@ -1,25 +1,19 @@
 package com.ndr2084.PriorityQueue;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+public class Heapify <T extends Comparable<? super T>>{
 
-public class Heapify{
-
-    private static ArrayList<Node> deepCopy_HeapArray(ArrayList<Node> original) {
-        ArrayList<Node> deepCopyList = new ArrayList<Node>();
-        for (Node node : original) {
-            Node nodeCopy = new Node(node.getPriority(), node.getValue());
-            deepCopyList.add(nodeCopy);
-        }
+    private ArrayList<T>  deepCopy_HeapArray(ArrayList<T> original) {
+        ArrayList<T> deepCopyList = new ArrayList<T>();
         return deepCopyList;
     }
 
-    public static ArrayList<Node> minHeapify(ArrayList<Node> list){
-        ArrayList<Node> tempArray = deepCopy_HeapArray(list);
+    public ArrayList<T> minHeapify(ArrayList<T> list){
+        ArrayList<T> tempArray = deepCopy_HeapArray(list);
         return tempArray;
     }
-    public static ArrayList<Node> maxHeapify(ArrayList<Node> list){
-        ArrayList<Node> tempArray = deepCopy_HeapArray(list);
+    public ArrayList<T> maxHeapify(ArrayList<T> list) {
+        ArrayList<T> tempArray = deepCopy_HeapArray(list);
         return tempArray;
     }
 }

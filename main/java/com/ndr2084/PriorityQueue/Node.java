@@ -1,19 +1,16 @@
 package com.ndr2084.PriorityQueue;
 
-public class Node {
-    private int priority = 0;
-    private String value;
+public class Node <P extends Comparable<P>, V>  {
+    P priority;
+    V value;
 
-    public Node(int priority, String value){
+    public Node(P priority, V value) {
         this.priority = priority;
         this.value = value;
     }
 
-    public int getPriority(){
-        return this.priority;
-    }
+    public int compareTo(Node<P, V> o) {
+        return priority.compareTo(o.priority);
 
-    public String getValue(){
-        return this.value;
     }
-    }
+}
